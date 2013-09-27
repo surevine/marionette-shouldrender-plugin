@@ -1,5 +1,15 @@
-(function() {
-    var Marionette = Backbone.Marionette
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['marionette'], factory);
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS
+        factory(require('marionette'));
+    } else {
+        // Browser globals
+        factory(Backbone.Marionette);
+    }
+}(function(Marionette) {
     
     var helper = {
         checkShouldRender: function() {
@@ -78,4 +88,4 @@
         }
     }, helper))
     
-})();
+}));
