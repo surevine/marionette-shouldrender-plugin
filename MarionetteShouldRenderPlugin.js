@@ -25,7 +25,7 @@
     var originalView = Marionette.View
     Marionette.View = originalView.extend(_.extend({
         render: function() {
-            if ( !_.isFunction(this.checkShouldRender) || !this.checkShouldRender() ) {
+            if ( _.isFunction(this.checkShouldRender) && !this.checkShouldRender() ) {
                 return;
             }
             
@@ -36,7 +36,7 @@
     var originalRegion = Marionette.Region
     Marionette.Region = originalRegion.extend(_.extend({
         render: function() {
-            if ( !_.isFunction(this.checkShouldRender) || !this.checkShouldRender() ) {
+            if ( _.isFunction(this.checkShouldRender) && !this.checkShouldRender() ) {
                 return;
             }
             
@@ -47,7 +47,7 @@
     var originalCollectionView = Marionette.CollectionView
     Marionette.CollectionView = originalCollectionView.extend(_.extend({
         render: function() {
-            if ( !_.isFunction(this.checkShouldRender) || !this.checkShouldRender() ) {
+            if ( _.isFunction(this.checkShouldRender) && !this.checkShouldRender() ) {
                 return;
             }
             
@@ -58,7 +58,7 @@
     var originalItemView = Marionette.ItemView
     Marionette.ItemView = originalItemView.extend(_.extend({
         render: function() {
-            if ( !_.isFunction(this.checkShouldRender) || !this.checkShouldRender() ) {
+            if ( _.isFunction(this.checkShouldRender) && !this.checkShouldRender() ) {
                 return;
             }
             
@@ -69,7 +69,7 @@
     var originalLayout = Marionette.Layout
     Marionette.Layout = originalLayout.extend(_.extend({
         render: function() {
-            if ( !_.isFunction(this.checkShouldRender) || !this.checkShouldRender() ) {
+            if ( _.isFunction(this.checkShouldRender) && !this.checkShouldRender() ) {
                 return;
             }
             
@@ -80,7 +80,7 @@
     var originalCompositeView = Marionette.CompositeView
     Marionette.CompositeView = originalCompositeView.extend(_.extend({
         render: function() {
-            if ( !_.isFunction(this.checkShouldRender) || !this.checkShouldRender() ) {
+            if ( _.isFunction(this.checkShouldRender) && !this.checkShouldRender() ) {
                 return;
             }
             
